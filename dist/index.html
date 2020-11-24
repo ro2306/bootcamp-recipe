@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <script id="Recipes-Finder" type="text/x-handlebars-template">
+        {{#each Recipes}}
+             <div class="ingredients">
+                 <div class="title">{{title}}</div>
+                
+                 <img class="thumbnail" src="{{imageSrc}}" onerror ="onImageError(this)">
+                 <a href="https://www.youtube.com/watch?v=oqL0mLDBzS4">Click Here!</a>
+                 <div div class="">{{pos}}</div>
+                 
+             </div>
+         {{/each}}
+
+    
+     </script>
+
+     <div id="search-container">
+
+        <input type="text" id="recipe-input">
+        <button onclick=getTeam()>Search!</button> </div>
+        <div id="Recipes-container"></div>
+    
+     
+        
+     
+
+
+
+
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="render.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
